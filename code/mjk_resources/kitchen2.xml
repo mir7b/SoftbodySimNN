@@ -1,0 +1,61 @@
+<mujocoinclude> <!-- The ham falls onto the hand-->
+    <worldbody>
+        <!-- Toast -->
+        <body name="Toast" pos="0.6 0.2 0.21"><!-- pos="0.6 -0.2 0.22"-->
+            <freejoint/>
+            <geom size="0.05 0.05 0.005" type="box" material="mat_toast" />
+            <!--composite prefix="T" type="box" count="25 25 3" spacing="0.005" >
+                <skin texcoord="true" material="mat_toast"/>
+                <geom size=".001" mass="0.001" /> 
+            </composite-->
+        </body>
+
+        <!-- Cheese -->
+        <body name="Cheese" pos="0.6 0.2 0.23" >
+            <freejoint/>
+            <composite prefix="CHEESE" type="box" count="20 20 2" spacing="0.005" >
+                <skin texcoord="true" material="mat_cheese"/>
+                <geom size="0.001" mass="0.001" /> 
+            </composite>
+        </body>
+
+        <!-- HAM --> <!-- <body name="A" pos="0.6 0.185 0.4" quat="0 0 -1.01 1"> -->
+        <body name="A" pos="0.8 0 0.75"> 
+            <!--composite prefix="A" type="grid" count="16 16 1" spacing="0.005" flatinertia="0.0001">
+                <geom type="capsule" size="0.004 0.003" rgba="0 0 1 1" density="0.001"/>
+                <joint kind="main" damping="0.001"/>
+                <skin texcoord="true" material="mat_ham" subgrid="8" inflate="0.001"/>
+            </composite-->
+            <composite prefix="A" type="grid" count="16 16 1" spacing="0.005" flatinertia="0.0001">
+                <geom type="capsule" size="0.004 0.003" rgba="1 0 0 1" mass="0.00001"/>
+                <!--joint kind="twist" damping="10" limited="true" stiffness="10" range="0.01 0.01" armature="10"/-->
+                <skin texcoord="true" material="mat_ham" subgrid="1" inflate="0.002"/>
+            </composite>
+        </body>
+
+
+        <!--table -->
+        <body>
+            <geom name="table" size="0.3 0.5 0.1" type="plane" rgba="0.2 0.2 0.2 1" pos="0.6 0.1 0.2" conaffinity="1"/>
+        </body>
+
+        <geom size="6 6 .125" type="plane" material="MatPlane" conaffinity="1"/>
+        <light directional="false" cutoff="70" exponent="10" diffuse="1 1 1" specular="1 1 1" pos=".9 .3 2.5" dir="-.9 -.3 -2.5 "/>
+        <camera name="cam1" pos="1.5 0.5 1.5" quat="1 0.5 0.5 1.8"/>
+    </worldbody>
+
+    <asset>
+        <texture name="tex-cheese" type="2d" builtin="flat" rgb1="1.0 0.7 0.2" width="200" height="200"/>
+        <material name="mat_cheese" texture="tex-cheese" emission="0" specular="0" reflectance="0" shininess="0" />
+
+        <texture name="tex-ham" type="2d" builtin="flat" rgb1="0.8 0.4 0.4" width="200" height="200"/>
+        <material name="mat_ham" texture="tex-ham" emission="0" specular="0" reflectance="0" shininess="0" />
+
+        <texture name="tex-toast" type="2d" builtin="flat" rgb1="1 0.6 0.3" width="200" height="200"/>
+        <material name="mat_toast" texture="tex-toast" emission="0" specular="0" reflectance="0" shininess="0" />
+
+        <texture name="texplane" type="2d" builtin="checker" rgb1=".1 .2 .3" rgb2=".2 .3 .4" width="600" height="600"/>
+        <material name="MatPlane" reflectance="0.01" texture="texplane" texrepeat="1 1" texuniform="true"/>
+    </asset>
+    
+</mujocoinclude>

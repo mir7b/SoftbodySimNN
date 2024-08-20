@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<robot name="toast">
+	<link name="toast">
+		<collision>
+			<geometry>
+				<mesh filename="toast.stl"/>
+			</geometry>
+		</collision>
+		<visual>
+			<geometry>
+				<mesh filename="toast.dae"/>
+			</geometry>
+		</visual>
+	</link>
+</robot>
