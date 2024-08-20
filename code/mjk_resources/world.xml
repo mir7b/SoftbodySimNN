@@ -1,0 +1,8 @@
+<mujoco>
+    <!--option timestep="0.01" solver="CG" iterations="300" tolerance="1e-6" gravity="0 0 -9.81"/-->
+    <option timestep="0.01" solver="CG" tolerance="1e-10"/>
+
+    <include file="kitchen2.xml"/>
+    <include file="PR2/pr2_arm.xml"/>
+    <!--size njmax="8000" nconmax="4000"/-->
+</mujoco>
