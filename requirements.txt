@@ -4,7 +4,7 @@ mujoco==2.3.2
 numpy==1.24.3
 opencv_python==4.7.0.72
 Pillow==9.4.0
-pybullet==3.2.5;python_version=="3.8.10"
+pybullet==3.2.5
 scipy==1.14.0
 tensorflow==2.13.1
 visualkeras==0.0.2
