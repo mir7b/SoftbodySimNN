@@ -144,6 +144,6 @@ class MJK(object):
 		return reward
 
 	def close(self):
-		cv2.destroyAllWindows()
-		#self.env.close()
+		#cv2.destroyAllWindows()
+		self.env.close()
 		return True
