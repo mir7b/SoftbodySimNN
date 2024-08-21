@@ -144,6 +144,7 @@ class MJK(object):
 		return reward
 
 	def close(self):
+		# For some reason these functions don't work anymore...         
 		#cv2.destroyAllWindows()
-		self.env.close()
+		#self.env.close()
 		return True
