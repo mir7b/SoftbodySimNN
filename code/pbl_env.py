@@ -210,7 +210,7 @@ class PBL(object):
 		return reward
 
 	def close(self):
-		cv2.destroyAllWindows()
+		#cv2.destroyAllWindows()
 		if p.isConnected():
 			p.disconnect()
 			sleep(0.01)
