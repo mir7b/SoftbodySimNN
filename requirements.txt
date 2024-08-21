@@ -8,3 +8,4 @@ pybullet==3.2.5
 scipy==1.10.1
 tensorflow==2.13.1
 visualkeras==0.0.2
+xvfbwrapper==0.2.9
